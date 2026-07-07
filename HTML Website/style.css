@@ -1,0 +1,463 @@
+/* =========================
+   GENERAL WEBSITE STYLING
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    background-color: black;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo {
+    color: red;
+    font-size: 28px;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+nav ul li {
+    margin-left: 30px;
+}
+
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+nav ul li a:hover {
+    color: red;
+}
+
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+
+.page-title {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+
+.page-title h1 {
+    color: red;
+    font-size: 50px;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+.page-title p {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+
+.hero {
+
+    height: 90vh;
+
+    background-image:
+    linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.8)
+    ),
+    url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+}
+
+
+.hero-text {
+    max-width:800px;
+}
+
+
+.hero h1 {
+    font-size:60px;
+    text-shadow:3px 3px 10px black;
+}
+
+
+.hero p {
+    font-size:22px;
+    margin:20px;
+}
+
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+
+.button {
+
+    display:inline-block;
+
+    background:red;
+
+    color:white;
+
+    padding:15px 30px;
+
+    border-radius:5px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+}
+
+
+.button:hover {
+
+    background:darkred;
+
+}
+
+
+
+/* =========================
+   CAR GRID
+========================= */
+
+
+.cars-container {
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+    padding:50px;
+
+}
+
+
+
+/* Individual Card */
+
+
+.car-card {
+
+    background:#222;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    box-shadow:0 0 20px black;
+
+    transition:0.3s;
+
+}
+
+
+
+.car-card:hover {
+
+    transform:scale(1.05);
+
+}
+
+
+
+/* Thumbnail Images */
+
+
+.car-card img {
+
+    width:100%;
+
+    aspect-ratio:1 / 1;
+
+    object-fit:cover;
+
+    border-radius:10px;
+
+}
+
+
+
+/* Car Names */
+
+
+.car-card h2 {
+
+    color:red;
+
+    margin-top:15px;
+
+    text-align:center;
+
+}
+
+
+
+/* Hidden Information */
+
+
+.car-info {
+
+    display:none;
+
+    margin-top:20px;
+
+}
+
+
+
+.car-card.active .car-info {
+
+    display:block;
+
+}
+
+
+
+.car-info p {
+
+    margin-bottom:15px;
+
+}
+
+
+
+.car-info ul {
+
+    list-style-position:inside;
+
+}
+
+
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+
+.contact-section {
+
+    display:flex;
+
+    justify-content:center;
+
+    padding:50px;
+
+}
+
+
+
+form {
+
+    width:500px;
+
+    background:#222;
+
+    padding:30px;
+
+    border-radius:10px;
+
+    box-shadow:0 0 20px black;
+
+}
+
+
+
+form label {
+
+    display:block;
+
+    margin-top:15px;
+
+}
+
+
+
+input,
+textarea,
+select {
+
+
+    width:100%;
+
+    padding:12px;
+
+    margin-top:5px;
+
+    background:#333;
+
+    border:none;
+
+    color:white;
+
+    border-radius:5px;
+
+}
+
+
+
+textarea {
+
+    resize:none;
+
+}
+
+
+
+button {
+
+    margin-top:20px;
+
+    width:100%;
+
+    padding:15px;
+
+    background:red;
+
+    border:none;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    border-radius:5px;
+
+}
+
+
+
+button:hover {
+
+    background:darkred;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+
+    background:black;
+
+    text-align:center;
+
+    padding:20px;
+
+    margin-top:40px;
+
+}
+
+
+
+/* =========================
+   MOBILE DESIGN
+========================= */
+
+
+@media screen and (max-width:900px) {
+
+
+nav {
+
+    flex-direction:column;
+
+}
+
+
+nav ul {
+
+    margin-top:20px;
+
+}
+
+
+
+.cars-container {
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.page-title h1 {
+
+    font-size:35px;
+
+}
+
+
+
+.hero h1 {
+
+    font-size:40px;
+
+}
+
+
+
+}
