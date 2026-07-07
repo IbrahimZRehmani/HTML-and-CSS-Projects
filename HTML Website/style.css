@@ -1,0 +1,329 @@
+/* General Website Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    line-height: 1.6;
+}
+
+
+/* Navigation Bar */
+header {
+    background-color: #000;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: red;
+    font-size: 28px;
+    text-shadow: 2px 2px 5px black;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: red;
+}
+
+
+/* Homepage Hero Section */
+.hero {
+    height: 90vh;
+    background-image: linear-gradient(
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.8)),
+    url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+}
+
+
+.hero-text {
+    max-width: 800px;
+}
+
+
+.hero h1 {
+    font-size: 60px;
+    text-shadow: 3px 3px 10px black;
+}
+
+
+.hero p {
+    font-size: 20px;
+    margin: 20px;
+}
+
+
+/* Buttons */
+.button {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+
+.button:hover {
+    background-color: darkred;
+}
+
+
+/* General Sections */
+.intro,
+.featured,
+.page-title,
+.contact-info {
+    padding: 50px;
+    text-align: center;
+}
+
+
+.intro h2,
+.featured h2,
+.page-title h1,
+.contact-info h2 {
+    color: red;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+}
+
+
+/* Car Cards */
+.car-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+
+.car-card {
+    background-color: #222;
+    width: 320px;
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 0 15px black;
+}
+
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.car-card h3 {
+    color: red;
+    margin: 15px;
+}
+
+
+.car-card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+
+/* Cars Page */
+.car-details {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+    padding: 50px;
+    margin: 30px;
+
+    background-color: #1c1c1c;
+    border-radius: 10px;
+}
+
+
+.car-details img {
+    width: 450px;
+    border-radius: 10px;
+}
+
+
+.car-info h2 {
+    color: red;
+    margin-bottom: 20px;
+}
+
+
+.car-info ul {
+    margin-top: 20px;
+    list-style-position: inside;
+}
+
+
+/* Contact Form */
+.contact-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+
+form {
+    width: 500px;
+    background-color: #222;
+    padding: 30px;
+    border-radius: 10px;
+
+    box-shadow: 0 0 20px black;
+}
+
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+
+input,
+textarea,
+select {
+
+    width: 100%;
+    padding: 12px;
+
+    background-color: #333;
+    border: none;
+
+    color: white;
+
+    border-radius: 5px;
+}
+
+
+textarea {
+    resize: none;
+}
+
+
+button {
+
+    margin-top: 20px;
+
+    width: 100%;
+
+    padding: 15px;
+
+    background-color: red;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+}
+
+
+button:hover {
+
+    background-color: darkred;
+
+}
+
+
+/* Footer */
+footer {
+
+    background-color: black;
+
+    text-align: center;
+
+    padding: 20px;
+
+    margin-top: 40px;
+
+}
+
+
+/* Mobile Compatibility */
+@media screen and (max-width: 800px) {
+
+
+nav {
+
+    flex-direction: column;
+
+}
+
+
+nav ul {
+
+    margin-top: 20px;
+
+}
+
+
+.car-details {
+
+    flex-direction: column;
+
+}
+
+
+.car-details img {
+
+    width: 100%;
+
+}
+
+
+.hero h1 {
+
+    font-size: 40px;
+
+}
+
+}
